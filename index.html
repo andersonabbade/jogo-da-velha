@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h2>Jogo da Velha</h2>
+        <div class="board" id="board"></div>
+        <div class="winner" id="winner"></div>
+        <button onclick="resetGame()">Reiniciar Jogo</button>
+    </div>
+
+    <script>
+        const board = document.getElementById("board");
+        const winnerText = document.getElementById("winner");
+        let cells = Array(9).fill(null);
+        let currentPlayer = "X";
+        let gameActive = true;
+
+        function createBoard() {
+            board.innerHTML = "";
+            cells.forEach((cell, index) => {
+                const div = document.createElement("div");
+                div.classList.add("cell");
+                div.dataset.index = index;
+                div.addEventListener("click", handleMove);
+                div.innerText = cell;
+                board.appendChild(div);
+            });
+        }
+
+        function handleMove(event) {
+            const index = event.target.dataset.index;
+            if (!cells[index] && gameActive) {
+                cells[index] = currentPlayer;
+                event.target.innerText = currentPlayer;
+                checkWinner();
+                currentPlayer = currentPlayer === "X" ? "O" : "X";
+            }
+        }
+
+        function checkWinner() {
+            const winningCombinations = [
+                [0, 1, 2], [3, 4, 5], [6, 7, 8],
+                [0, 3, 6], [1, 4, 7], [2, 5, 8],
+                [0, 4, 8], [2, 4, 6]
+            ];
+            
+            for (const combo of winningCombinations) {
+                const [a, b, c] = combo;
+                if (cells[a] && cells[a] === cells[b] && cells[a] === cells[c]) {
+                    gameActive = false;
+                    winnerText.innerText = `Jogador ${cells[a]} venceu!`;
+                    return;
+                }
+            }
+            
+            if (!cells.includes(null)) {
+                winnerText.innerText = "Empate!";
+                gameActive = false;
+            }
+        }
+
+        function resetGame() {
+            cells = Array(9).fill(null);
+            currentPlayer = "X";
+            gameActive = true;
+            winnerText.innerText = "";
+            createBoard();
+        }
+
+        createBoard();
+    </script>
+</body>
+</html>
