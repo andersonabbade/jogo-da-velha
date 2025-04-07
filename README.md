@@ -14,7 +14,7 @@ Baixe ou clone o repositório:
 bash
 Copiar
 Editar
-git clone 
+git clone https://andersonabbade.github.io/jogo-da-velha/
 Abra o arquivo index.html no seu navegador.
 
 Nenhuma instalação é necessária, tudo roda direto no navegador!
