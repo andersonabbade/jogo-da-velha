@@ -1,23 +1,24 @@
-🕹️ Jogo da Velha
-Este é um projeto simples de Jogo da Velha (Tic Tac Toe) desenvolvido para praticar lógica de programação e habilidades com HTML, CSS e JavaScript.
 
-✅ Funcionalidades
-Dois jogadores podem jogar no mesmo dispositivo.
+# 🎮 Jogo da Velha
 
-Verificação automática de vitória ou empate.
+<img src="jogo%20da%20velha.png" alt="Print do Jogo da Velha" width="300"/>
 
-Interface simples e intuitiva.
+Este é um simples e divertido **Jogo da Velha** (Tic Tac Toe) desenvolvido com **HTML**, **CSS** e **JavaScript**. O jogo permite que dois jogadores se enfrentem em tempo real, marcando X e O em um tabuleiro 3x3 até que haja um vencedor ou um empate.
 
-🚀 Como executar
-Baixe ou clone o repositório:
+---
 
-bash
-Copiar
-Editar
-git clone https://andersonabbade.github.io/jogo-da-velha/
-Abra o arquivo index.html no seu navegador.
+## ✨ Funcionalidades
 
-Nenhuma instalação é necessária, tudo roda direto no navegador!
+- 🎯 Interface intuitiva e responsiva
+- 🔁 Botão para reiniciar o jogo
+- ✅ Verificação automática de vitória ou empate
+- 📱 Compatível com dispositivos móveis
 
-📌 Objetivo
-Este projeto foi criado com fins educacionais, para reforçar conhecimentos em lógica, manipulação do DOM e eventos no JavaScript.
+---
+
+## 🚀 Como executar
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/andersonabbade/jogo-da-velha.git
