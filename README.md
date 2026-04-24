@@ -86,7 +86,7 @@ Durante o desenvolvimento, foram aplicados conceitos como:
 Desenvolvido por **Anderson Abbade**
 
 🔗 GitHub: https://github.com/andersonabbade
-🔗 LinkedIn: (adicione aqui seu link)
+🔗 LinkedIn: https://www.linkedin.com/in/anderson-luis-1807m/
 
 ---
 
